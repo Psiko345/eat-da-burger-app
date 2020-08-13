@@ -16,5 +16,10 @@
   "bugs": {
     "url": "https://github.com/Psiko345/eat-da-burger-app/issues"
   },
-  "homepage": "https://github.com/Psiko345/eat-da-burger-app#readme"
+  "homepage": "https://github.com/Psiko345/eat-da-burger-app#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "express-handlebars": "^5.1.0",
+    "mysql": "^2.18.1"
+  }
 }
