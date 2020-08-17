@@ -2,7 +2,7 @@ const orm = require("../config/orm.js");
 
 const burger = {
   selectAll: (cb) => {
-    orm.all("burgers", (res) => {
+    orm.selectAll("burgers", (res) => {
       cb(res);
     });
   },
@@ -13,7 +13,7 @@ const burger = {
     });
   },
   updateOne: (objColVals, condition, cb) => {
-    orm.update("burgers", objColVals, condition, (res) => {
+    orm.updateOne("burgers", objColVals, condition, (res) => {
       cb(res);
     });
   },
