@@ -4,7 +4,7 @@
   "description": "An app that will log burger consumption using: MySQL, Node, Express, Handlebars and a homemade ORM.",
   "main": "server.js",
   "scripts": {
-    "test": "test",
+    "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js"
   },
   "repository": {
