@@ -10,7 +10,7 @@
             <h1 class="text-center welcome">Eat-Da-Burger!</h1>
         </div>
     </div>
-
+    <div class="row mt-2">
         <div class="col-md-6 my-1">
             <h2 class="ml-2 pl-3 colTitle">Already Devoured!</h2>
             <ul class="list-group ml-4">
@@ -21,9 +21,7 @@
                 {{/each}}
             </ul>
         </div>
-    </div>
 
-        <div class="row mt-2">
         <div class="col-md-6 my-1">
             <h2 class="ml-2 pl-3 colTitle">Awaiting Devourment...</h2>
             <ul class="list-group">
@@ -34,7 +32,7 @@
                 {{/each}}
             </ul>
         </div>
-
+    </div>
     <div class="row my-2 py-2">
         <div class="col-sm-12 col-md-10 offset-md-1 text-center">
 
@@ -50,19 +48,19 @@
                 <div class="custom-control custom-radio custom-control-inline">
                     <input type="radio" name="devoured" value="0" class="colTitle">
                     <label for="fresh">
-                        <p class="colTitle">Fresh.</p>
+                        <p class="colTitle">New</p>
                     </label>
                 </div>
 
                 <div class="custom-control custom-radio custom-control-inline">
                     <input type="radio" name="devoured" value="1" class="colTitle">
                     <label for="devoured">
-                        <p class="colTitle">Devoured.</p>
+                        <p class="colTitle">Devoured</p>
                     </label>
                 </div>
 
                 <div class="text-center mt-2">
-                    <button class="btn btn-success" type="submit">
+                    <button class="btn btn-danger" type="submit">
                         <h5 class="welcome">Add a Burger</h5>
                     </button>
                 </div>
