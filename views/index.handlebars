@@ -1,37 +1,75 @@
-<h1>Eat-Da-Burger!</h1>
+<div class="container">
+    <div class="row text-center">
+        <div class="col-sm-12 col-6 mx-auto">
+            <img src="/assets/img/burger.webp" alt="A delicious burger icon" class="my-4 img-fluid">
+        </div>
+    </div>
 
-<h2>Burgers that have not yet been devoured:</h2>
+    <div class="row my-2 py-2">
+        <div class="col-sm-12 col-md-10 offset-md-1">
+            <h1 class="text-center welcome">Eat-Da-Burger!</h1>
+        </div>
+    </div>
 
-<ul>
-  {{#each burger}}
-    {{#unless devoured}}
-      {{> burger/burger-block devoured=true}}
-    {{/unless}}
-  {{/each}}
-</ul>
+        <div class="col-md-6 my-1">
+            <h2 class="ml-2 pl-3 colTitle">Already Devoured!</h2>
+            <ul class="list-group ml-4">
+                {{#each burgers}}
+                {{#if devoured}}
+                {{> burgers/burger-block devoured=false}}
+                {{/if}}
+                {{/each}}
+            </ul>
+        </div>
+    </div>
 
-<h2>Burgers that have been </h2>
+        <div class="row mt-2">
+        <div class="col-md-6 my-1">
+            <h2 class="ml-2 pl-3 colTitle">Awaiting Devourment...</h2>
+            <ul class="list-group">
+                {{#each burgers}}
+                {{#unless devoured}}
+                {{> burgers/burger-block devoured=true}}
+                {{/unless}}
+                {{/each}}
+            </ul>
+        </div>
 
-<ul>
-  {{#each burger}}
-    {{#if devoured}}
-      {{> burger/burger-block devoured=false}}
-    {{/if}}
-  {{/each}}
-</ul>
+    <div class="row my-2 py-2">
+        <div class="col-sm-12 col-md-10 offset-md-1 text-center">
 
-<h2>Add a burger</h2>
-<form class="create-form">
+            <form class="create-form">
 
-  <div class="form-group">
-    <label for="ca">burger Name:</label>
-    <input type="text" id="ca" name="name">
-  </div>
+                <div class="form-group">
+                    <label for="burger">
+                        <p class="colTitle">Burger Name:</p>
+                    </label>
+                    <input type="text" id="burger" name="name">
+                </div>
 
-  <div class="form-group">
-    <label for="devoured">devoured?</label><br>
-    <input type="radio" name="devoured" value="1" checked> devoured!<br>
-  </div>
+                <div class="custom-control custom-radio custom-control-inline">
+                    <input type="radio" name="devoured" value="0" class="colTitle">
+                    <label for="fresh">
+                        <p class="colTitle">Fresh.</p>
+                    </label>
+                </div>
 
-  <button type="submit">Add burger</button>
-</form>
+                <div class="custom-control custom-radio custom-control-inline">
+                    <input type="radio" name="devoured" value="1" class="colTitle">
+                    <label for="devoured">
+                        <p class="colTitle">Devoured.</p>
+                    </label>
+                </div>
+
+                <div class="text-center mt-2">
+                    <button class="btn btn-success" type="submit">
+                        <h5 class="welcome">Add a Burger</h5>
+                    </button>
+                </div>
+
+            </form>
+
+        </div>
+    </div>
+
+</div>

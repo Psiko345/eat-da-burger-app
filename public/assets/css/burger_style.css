@@ -1,19 +1,17 @@
-li {
-  padding: 5px;
-  margin: 5px;
-  background: #faebd7;
+html,
+body {
+  background-color: orange;
 }
 
-.label {
-  font-weight: bold;
+.list-group-item {
+  background-color: honeydew;
 }
 
-.create-update-form {
-  padding: 5px;
-  margin: 5px;
-  background: aqua;
+.welcome {
+  font-family: "Raleway", sans-serif;
+  font-weight: bolder;
 }
 
-.form-group {
-  margin-bottom: 5px;
+.colTitle {
+  font-family: "Raleway", sans-serif;
 }
